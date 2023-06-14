@@ -1,1 +1,27 @@
-Hello Cruel World
+<html>
+<head>
+<title>Tanner</title>
+<meta HTTP-EQUIV='Pragma' CONTENT='no-cache'>
+
+<script>
+function start(){
+    var sec = 10;
+    setInterval(function(){
+    document.getElementById('timer').innerHTML = sec;
+    sec--;
+    if(sec == 00) {
+        window.location.reload(true);
+    }
+    },1000);
+    }
+</script>
+
+    <style>body {background-color: lightskyblue;}</style>
+</head>
+
+<body onload='start()'>
+    <h1 style='font-size:100px; color:red;'  ><ins> Tanner's House </ins></h1>
+    <h1 style='font-size:90px;  color:black;'> Temp Is: " + String(tempC) + "</h1>
+    <p  style='font-family:verdana; font-size:65px;  color:firebrick;'> Reload In: <span id='timer'></span></p>
+
+</body></html>
